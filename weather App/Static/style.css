@@ -1,0 +1,90 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.5s ease; 
+}
+
+.container {
+  background-color: rgba(233, 226, 226, 0.9); 
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #6d88b6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #768ebe;
+}
+
+.weather-box {
+  margin-top: 20px;
+}
+
+.weather-box img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.temp {
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+}
+
+.desc {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.error {
+  color: rgb(218, 99, 99);
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.time {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+}
+

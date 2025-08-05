@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: {{ bg_color }};
+      transition: background-color 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌤 Live Weather App</h1>
+    <form method="POST" class="search-form">
+      <input type="text" name="city" placeholder="Enter city name" required>
+      <button type="submit">Search</button>
+    </form>
+
+    {% if weather %}
+      {% if weather.error %}
+        <p class="error">{{ weather.error }}</p>
+      {% else %}
+        <div class="weather-box">
+          <h2>{{ weather.city }}</h2>
+          <img src="{{ weather.icon }}" alt="Weather Icon">
+          <p class="temp">{{ weather.temperature }}°C</p>
+          <p class="desc">{{ weather.description }}</p>
+          <p>💧 Humidity: {{ weather.humidity }}%</p>
+          <p>🌬 Wind Speed: {{ weather.wind }} km/h</p>
+          <p class="time">🕒 Time: {{ current_time }}</p>
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+</body>
+</html>
+
